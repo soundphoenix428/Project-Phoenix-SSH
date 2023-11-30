@@ -2,7 +2,7 @@
 set -e
 echo -e "\e[32m
  ************************************************
- *     Project Phoenix Stastistic Script        *
+ *     Project Phoenix Script                   *
  *    THIS SCRIPT CAN ONLY BE RUN IN UBUNTU     *
  ************************************************\e[0m"
 
@@ -28,6 +28,7 @@ esac
 done
 echo -e "\e[32m* Installing dependencies..\3[0m"
 sudo apt update > /dev/null 2>&1
+
 #Install Curl and NPM
 if ! [ -x "$(command -v curl)" ]; then
 echo -e "\e[32m* Installing curl...\e[0m"
@@ -57,7 +58,6 @@ if ! [ -x "$(command -v pm2)" ]; then
 echo -e "\e[32m* Installing pm2...\e[0m"
 sudo npm install pm2 -g > /dev/null 2>&1
 fi
-
 
 # Start Project Phoenix
 sudo pm2 start ~/Project Phoenix/config.json --name "Project Phoenix"
