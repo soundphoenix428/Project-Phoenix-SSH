@@ -1,10 +1,10 @@
 #!/Bin/Bash
 set -e
 echo -e "\e[32m
- ************************************************
- *     Project Phoenix Script                   *
- *    THIS SCRIPT CAN ONLY BE RUN IN UBUNTU     *
- ************************************************\e[0m"
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#              Project Phoenix Script                   #
+#       This Script only works on Ubuntu & Debian       #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # #\e[0m"
 
 # Check if user is sudo
 if [[ $EUITD -ne 0 ]]; then
