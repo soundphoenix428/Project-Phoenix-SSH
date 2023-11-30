@@ -1,0 +1,15 @@
+{
+    "apps":[
+    {
+        "name":"Project Phoenix",
+        "cwd":".",
+        "script":"/usr/bin/java",
+        "args":[
+            "-jar",
+            "/root/Project Phoenix/Project Phoenix.jar",
+        ],
+        "exec_interpreter":"",
+        "exec_mode":"fork"
+     }
+   ]
+}
