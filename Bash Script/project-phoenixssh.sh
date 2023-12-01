@@ -29,7 +29,7 @@ done
 echo -e "\e[32m* Installing dependencies..\3[0m"
 sudo apt update > /dev/null 2>&1
 
-#Install Curl and NPM
+#Install Curl
 if ! [ -x "$(command -v curl)" ]; then
 echo -e "\e[32m* Installing curl...\e[0m"
 sudo apt install -y curl > /dev/null 2>&1
@@ -60,6 +60,6 @@ sudo npm install pm2 -g > /dev/null 2>&1
 fi
 
 # Start Project Phoenix
-sudo pm2 start ~/Project Phoenix/config.json --name "Project Phoenix"
+sudo pm2 start ~/Project-Phoenix/config.json --name "Project-Phoenix"
 sudo pm2 startup
 sudo pm2 save
