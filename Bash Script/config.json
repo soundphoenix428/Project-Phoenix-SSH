@@ -6,7 +6,7 @@
         "script":"/usr/bin/java",
         "args":[
             "-jar",
-            "/root/Project-Phoenix/Project-Phoenix.jar",
+            "/root/Project-Phoenix-ssh/Project-Phoenix-ssh.jar",
         ],
         "exec_interpreter":"",
         "exec_mode":"fork"
