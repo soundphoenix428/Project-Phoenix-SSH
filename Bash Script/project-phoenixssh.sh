@@ -13,7 +13,7 @@ if [[ $EUITD -ne 0 ]]; then
 fi
 
 # Welcome the user to the script 
-echo "e[32m Welcome to the Project Phoenix Script /e[0m"
+echo e[32m Welcome to the Project Phoenix Script /e[0m
 while true; do
 RESET="/e[0m"
 GREEN="e[32m"
