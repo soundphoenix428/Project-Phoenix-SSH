@@ -25,7 +25,7 @@ exit;;
 * ) echo -e "\3[32m* Invalid Response.\3[0m";;
 esac
 done
-echo -e "\e[32m* Installing dependencies...\3[0m"
+echo -e "\e[32m* Installing dependencies..\3[0m"
 sudo apt update > /dev/null 2>&1
 
 # Install Curl
