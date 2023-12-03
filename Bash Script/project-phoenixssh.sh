@@ -81,6 +81,6 @@ sudo npm install pm2 -g > /dev/null 2>&1
 fi
 
 # Start Project Phoenix
-sudo pm2 start ~/Project-Phoenix/config.json --name "Project-Phoenix"
+sudo pm2 start ~/LavaLink/config.json --name "Project-Phoenix"
 sudo pm2 startup
 sudo pm2 save
