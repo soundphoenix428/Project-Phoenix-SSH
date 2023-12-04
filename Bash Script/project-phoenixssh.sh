@@ -36,7 +36,6 @@ break;;
 exit;;
 * ) echo -e "\3[32m* Invalid Response.\3[0m";;
 esac
-done
 echo -e "\e[32m* Installing dependencies...\3[0m"
 
 # Install Curl
