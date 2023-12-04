@@ -45,17 +45,18 @@ echo -e "\e[32m* Installing curl.\e[0m"
 sudo apt install -y curl > /dev/null 2>&1
 fi
 
-# Install NodeJS 
+# Install NodeJS
 if ! [ -x "$(command -v node)" ]; then
-ehco -e "\e[32m* Installing NodeJS\e[0m"
-ehco -e "\e[32m* Which Version of NodeJS would you like to install? []\e[0m"
+echo -e "\e[32m* Installing NodeJS\e[0m"
+echo -e "\e[32m* Which NodeJS version would you like to install? []\e[0m"
 read NodeJSVer
-if [[ -n "NodeJsVer" ]]
+if [[ -n "NodeJSVer" ]]
 then
 in=$NodeJSVer
-echo -e "\e3m* Installing Node Js: $in \e[0m"
-curl -sl https://deb.nodesource.com/setup_$in.x | sudo -E bash - > /dev/null 2>&1 && sudo apt install -y nodejs > /dev/null 2>&1
-fi 
+fi
+echo -e "\e[32m* Installing NodeJS: $in \e[0m"
+curl -sL https://deb.nodesource.com/setup_$in.x | sudo -E bash - > /dev/null 2>&1 && sudo apt install -y nodejs > /dev/null 2>&1
+fi
 
 # Install NPM 
 if ! [ -x "$(command -v npm)" ]; then
