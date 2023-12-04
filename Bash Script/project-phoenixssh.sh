@@ -89,6 +89,15 @@ case $yn in
 break;;
 [nN] ) echo -e "\e[32m* Confirmed. Exiting...\e[0m";
 exit;;
-* ) echo -e "\3[32m* Invalid Response.\3[0";;
+* ) echo -e "\e[32m* Invalid Response.\3[0";;
 esac 
 done
+echo -e  "\e[32m* All Avalible commands:
+Help-Runs help command
+Exit-Runs help command
+Upload-Uploads files to Project Phoenx's Pterodactyl pannel via upload
+Info-Shows info 
+Uname-Shows OS name"
+read -p "$(echo -e $RED"\n* PLEASE NOTE ALL COMMANDS ARE NOT YET CODED!"$RESET)"
+read -p "$(echo -e $RED"\n* Exiting Project Phoenix..."$RESET)"
+exit;;
