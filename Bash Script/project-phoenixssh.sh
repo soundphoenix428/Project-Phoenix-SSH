@@ -99,4 +99,4 @@ Info-Shows info
 Uname-Shows OS name"
 read -p "$(echo -e $GREEN"\n* PLEASE NOTE ALL COMMANDS ARE NOT YET CODED!"$RESET)"
 read -p "$(echo -e $GREEN"\n* Exiting Project Phoenix..."$RESET)"
-exit;;
+exit
