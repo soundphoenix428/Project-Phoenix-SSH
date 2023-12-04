@@ -53,7 +53,7 @@ if [[ -n "NodeJsVer" ]]
 then
 in=$NodeJSVer
 echo -e "\e3m* Installing Node Js: $in \e[0m"
-curl -sl https://deb.nodesource.com/setup_$in.x | sudo -E bash - > /dev/null 2>&1 && sudo apt insta;; -y nodejs > /dev/null 2>&1
+curl -sl https://deb.nodesource.com/setup_$in.x | sudo -E bash - > /dev/null 2>&1 && sudo apt install -y nodejs > /dev/null 2>&1
 fi 
 
 # Install NPM 
