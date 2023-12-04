@@ -91,7 +91,6 @@ break;;
 exit;;
 * ) echo -e "\e[32m* Invalid Response.\3[0";;
 esac 
-done
 echo -e  "\e[32m* All Avalible commands:
 Help-Runs help command
 Exit-Runs help command
