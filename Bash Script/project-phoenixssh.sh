@@ -21,66 +21,37 @@ if [[ $EUITD -ne 0 ]]; then
     exit 1
 fi
 
-# Proceed?
-while true; do
-RESET="\e[0m"
-RED="\e[32m"
-read -p "$(echo -e $RED"\n* Do you want to proceed? (Y/N)"$RESET)" yn
-case $yn in
-[yY] ) echo -e "\e[32m* Confirmed. Continuing...\e[0m";
-break;;
-[nN] ) echo -e "\e[32m* Confirmed. Exiting Installation...\e[0m";
-exit;;
-* ) echo -e "\3[32m* Invalid Response.\3[0m";;
-esac
-done
-echo -e "\e[32m* Installing dependencies..\3[0m"
-sudo apt update > /dev/null 2>&1
+# Proceed ?
+while = true do;
+RESET="\e[0"
+RED="\e[32"
 
-# Install Curl
-if ! [ -x "$(command -v curl)" ]; then
-echo -e "\e[32m* Installing curl...\e[0m"
-sudo apt install -y curl > /dev/null 2>&1
+read -p "$(echo -e $RED"\n* Project Phoenix is starting..."$RESET)"
+
+read -p "$(echo -e $RED"\n* Would you like to continue? (Y/N)"$RESET)" yn
+case $yn in 
+[yY] ) echo echo -e "\e[32m* Confirmed. Continuing..\e[0m";
+break;;
+[nN] ) echo -e "\e[32m* Confirmed. Exiting...\e[0m";
+exit;;
+* ) echo -e "\3[32m* Invalid Response.\3[0";;
+esac 
+done
+echo -e "\e[32m* Installing dependencies...\3[0m"
+# Install Pm2
+if ! [ -x "$(command -v curl)" ]; then 
+ehco -e "\e[32m* Installing curl... \e[0m"
+sudo apt install -y curl > /dev/null 2&1
 fi
 
-# Install NodeJS
+# Install NodeJS 
 if ! [ -x "$(command -v node)" ]; then
-echo -e "\e[32m* Installing NodeJS\e[0m"
-echo -e "\e[32m* Which NodeJS version would you like to install? []\e[0m"
+ehco -e "\e[32m* Installing NodeJS\e[0m"
+ehco -e "\e[32m* Which Version of NodeJS would you like to install? []\e[0m"
 read NodeJSVer
-if [[ -n "NodeJSVer" ]]
+if [[ -n "NodeJsVer" ]]
 then
 in=$NodeJSVer
-fi
-echo -e "\e[32m* Installing NodeJS: $in \e[0m"
-curl -sL https://deb.nodesource.com/setup_$in.x | sudo -E bash - > /dev/null 2>&1 && sudo apt install -y nodejs > /dev/null 2>&1
-fi
-
-# Install NPM 
-if ! [ -x "$(command -v npm)" ]; then
-echo -e "\e[32m* Installing NPM.\e[0m"
-sudo apt install -y npm > /dev/null 2>&1
-fi
-
-# Install Wget
-if ! [ -x "$(command -v wget)" ]; then
-echo -e "\e[32m* Installing wget.\e[0m"
-sudo apt install -y wget > /dev/null 2>&1
-fi
-
-# Install Java
-if ! [ -x "$(command -v javac)" ]; then
-echo -e "\e[32m* Installing java.\e[0m"
-sudo apt install -y default-jdk > /dev/null 2>&1
-fi
-
-# Install Pm2
-if ! [ -x "$(command -v pm2)" ]; then
-echo -e "\e[32m* Installing pm2.\e[0m"
-sudo npm install pm2 -g > /dev/null 2>&1
-fi
-
-# Start Project Phoenix
-sudo pm2 start ~/LavaLink/config.json --name "Project-Phoenix"
-sudo pm2 startup
-sudo pm2 save
+echo -e "\e3m* Installing Node Js: $in \e[0m"
+curl -sl https://deb.nodesource.com/setup_$in.x | sudo -E bash - > /dev/null 2>&1 && sudo apt insta;; -y nodejs > /dev/null 2>&1
+fi 
