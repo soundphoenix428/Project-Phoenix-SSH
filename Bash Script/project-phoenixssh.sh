@@ -24,18 +24,18 @@ fi
 # Proceed ?
 while = true do;
 RESET="\e[0"
-RED="\e[32"
+GREEN="\e[32"
 
-read -p "$(echo -e $RED"\n* Project Phoenix is starting..."$RESET)"
+read -p "$(echo -e $GREEN"\n* Project Phoenix is starting..."$RESET)"
 
-read -p "$(echo -e $RED"\n* Would you like to continue? (Y/N)"$RESET)" yn
-case $yn in 
+read -p "$(echo -e $GREEN"\n* Do you want to proceed? (Y/N)"$RESET)" yn
+case $yn in
 [yY] ) echo -e "\e[32m* Confirmed. Continuing..\e[0m";
 break;;
-[nN] ) echo -e "\e[32m* Confirmed. Exiting...\e[0m";
+[nN] ) echo -e "\e[32m* Confirmed. Exiting Installation..\e[0m";
 exit;;
-* ) echo -e "\3[32m* Invalid Response.\3[0";;
-esac 
+* ) echo -e "\3[32m* Invalid Response.\3[0m";;
+esac
 done
 echo -e "\e[32m* Installing dependencies...\3[0m"
 
@@ -99,6 +99,6 @@ Exit-Runs help command
 Upload-Uploads files to Project Phoenx's Pterodactyl pannel via upload
 Info-Shows info 
 Uname-Shows OS name"
-read -p "$(echo -e $RED"\n* PLEASE NOTE ALL COMMANDS ARE NOT YET CODED!"$RESET)"
-read -p "$(echo -e $RED"\n* Exiting Project Phoenix..."$RESET)"
+read -p "$(echo -e $GREEN"\n* PLEASE NOTE ALL COMMANDS ARE NOT YET CODED!"$RESET)"
+read -p "$(echo -e $GREEN"\n* Exiting Project Phoenix..."$RESET)"
 exit;;
