@@ -62,3 +62,14 @@ echo -e "\e[32m* Installing NPM...\e[0m"
 sudo apt install -y npm > /dev/null 2>&1
 fi
 
+# Install Java
+if ! [ -x "$(command -v javac)" ]; then
+echo -e "\e[32m* Installing java...\e[0m"
+sudo apt install -y default-jdk > /dev/null 2>&1
+fi
+
+# Install Pm2
+if ! [ -x "$(command -v pm2)" ]; then
+echo -e "\e[32m* Installing pm2...\e[0m"
+sudo npm install pm2 -g > /dev/null 2>&1
+fi
