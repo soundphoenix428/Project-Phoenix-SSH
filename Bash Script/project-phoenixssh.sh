@@ -55,3 +55,10 @@ in=$NodeJSVer
 echo -e "\e3m* Installing Node Js: $in \e[0m"
 curl -sl https://deb.nodesource.com/setup_$in.x | sudo -E bash - > /dev/null 2>&1 && sudo apt insta;; -y nodejs > /dev/null 2>&1
 fi 
+
+# Install NPM 
+if ! [ -x "$(command -v npm)" ]; then
+echo -e "\e[32m* Installing NPM...\e[0m"
+sudo apt install -y npm > /dev/null 2>&1
+fi
+
