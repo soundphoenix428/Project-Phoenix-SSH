@@ -17,7 +17,7 @@ echo -e "\e[32m
 
 # Check if user is sudo
 if [[ $EUITD -ne 0 ]]; then
-    echo -e "\e{32m* This Script must be executed via sudo user. \e[0m" 1>&2
+    echo -e "\e{32m* Project Phoenix SSH must be executed via sudo user. \e[0m" 1>&2
     exit 1
 fi
 
